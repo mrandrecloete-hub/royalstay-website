@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RoyalStay Intelligence | Run your whole property from one app</title>
+<meta name="description" content="Reservations, front desk, restaurant, bar, housekeeping, stock and invoices in one app, with Max, an AI assistant that does the typing. Made for lodges, guest houses and hotels in Namibia.">
+<meta name="theme-color" content="#040a1a">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="RoyalStay Intelligence">
+<meta property="og:description" content="Run your whole property from one app: bookings, front desk, restaurant, bar, stock, invoices and an AI assistant called Max.">
+<meta property="og:image" content="https://mrandrecloete-hub.github.io/royalstay-website/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preload" href="fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css">
+<script>document.documentElement.classList.remove('no-js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+
+<!-- icons used below -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="m8 12.4 2.7 2.7L16 9.6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 9a15 15 0 0 1 19 0M5.5 12.5a10.5 10.5 0 0 1 13 0M8.8 16a5.5 5.5 0 0 1 6.4 0"/><circle cx="12" cy="19.2" r="1" fill="currentColor"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2.5H7a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 2.5V8h5M9 13h6M9 17h6"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-bed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18.5V6M3 14h18v4.5M21 14v-2.5a3 3 0 0 0-3-3h-7V14"/><circle cx="7" cy="10.8" r="1.6"/></symbol>
+  <symbol id="i-fork" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v8M4.5 3v5a2.5 2.5 0 0 0 5 0V3M7 11v10M17 21V3c-2.5 1.2-3.8 4-3.8 7.5 0 1.6 1.4 2.5 3.8 2.5"/></symbol>
+  <symbol id="i-glass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h14l-1.6 9.4a5.4 5.4 0 0 1-10.8 0zM12 17.8V21M8 21h8"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 13.9 9l5.6 1.9-5.6 1.9L12 18.5l-1.9-5.7L4.5 10.9 10.1 9zM19 3v3M20.5 4.5h-3"/></symbol>
+  <symbol id="i-broom" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 3 5 5M17 5.5 9.5 13M5 21c-.5-2.5.5-5.5 3-7.5l3 3C9 19 6.5 21.5 5 21zM9.5 13l1.6 1.6"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3.5 7.5 8.5-4.5 8.5 4.5v9L12 21l-8.5-4.5zM3.5 7.5 12 12l8.5-4.5M12 12v9"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V4M4 20h16M8.5 16v-4M13 16V8M17.5 16v-6"/></symbol>
+  <symbol id="i-tent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2.5 20.5h19zM12 3v17.5M9 20.5l3-6 3 6"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m21 3-9.5 18-2.2-7.8L3 11zM21 3 9.3 13.2"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8 4.5 5.5v6c0 4.6 3.1 8.3 7.5 9.7 4.4-1.4 7.5-5.1 7.5-9.7v-6z"/><path d="m8.8 12.1 2.4 2.4 4-4.3"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3-5.5 6.5-5.5s5.9 1.9 6.5 5.5M16 4.8a3.5 3.5 0 0 1 0 6.4M18 14.8c2 .6 3.2 2.3 3.5 5.2"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v12M7 11l5 5 5-5M4.5 20.5h15"/></symbol>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="RoyalStay Intelligence, top of the page">
+      <img src="img/logo.png" alt="" width="40" height="40">
+      <span>RoyalStay<small>Intelligence</small></span>
+    </a>
+    <nav class="links" id="links" aria-label="Main">
+      <a href="#demo">Try it live</a>
+      <a href="#features">Features</a>
+      <a href="#max">Max, the AI</a>
+      <a href="#departments">Departments</a>
+      <a href="#get">Get the app</a>
+      <a href="#how">How it starts</a>
+      <a href="#faq">Questions</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn ghost sm" href="https://royaltystay.abrdns.com/login">Sign in</a>
+      <a class="btn primary sm" href="https://royaltystay.abrdns.com/register">Create account</a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="links"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- ===================================================== hero -->
+<section class="hero" id="top">
+  <div class="glow" aria-hidden="true"><i class="a"></i><i class="b"></i><i class="c"></i></div>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow rv"><b>Made in Namibia</b> For lodges, guest houses and hotels</span>
+      <h1 class="rv d1">Your property, <span class="grad">running itself</span> from one app.</h1>
+      <p class="lead rv d2">Bookings, front desk, restaurant, bar, housekeeping, stock and invoices in one place. Plus Max, an AI assistant that does the typing while you look after your guests.</p>
+      <div class="hero-actions rv d3">
+        <a class="btn primary" href="https://royaltystay.abrdns.com/register">Create your account
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <button class="btn ghost" type="button" data-install>Install the app</button>
+        <a class="btn ghost" href="#demo">Try it live</a>
+      </div>
+      <p class="fine rv d3">Works on your phone, tablet and computer. Try it with sample rooms first.</p>
+    </div>
+
+    <div class="stage rv d2">
+      <div class="chip one"><i>&#10003;</i> Room S301 checked in</div>
+      <div class="chip two"><i>&#9993;</i> Invoice ready to send</div>
+      <div class="browser">
+        <div class="bar"><i></i><i></i><i></i><span>Finance and management</span></div>
+        <img src="img/dashboard.webp" width="1800" height="1125" alt="The management dashboard showing revenue, occupancy, in house guests and trends for a lodge.">
+      </div>
+      <div class="phone"><img src="img/phone-dashboard.webp" width="780" height="1688" alt="The same dashboard on a phone."></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== strip -->
+<div class="strip">
+  <div class="wrap">
+    <ul>
+      <li><svg><use href="#i-phone"/></svg> Installs on your phone like an app</li>
+      <li><svg><use href="#i-wifi"/></svg> Keeps working when the internet drops</li>
+      <li><svg><use href="#i-doc"/></svg> Invoices and receipts as PDF, in NAD</li>
+      <li><svg><use href="#i-users"/></svg> Every person sees only their own work</li>
+      <li><svg><use href="#i-lock"/></svg> Every change is written to an audit trail</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================================================== live demo -->
+<section class="pad" id="demo" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="kicker">Try it live</span>
+      <h2>Use the app right here, right now.</h2>
+      <p>Book a guest, check them in, take a restaurant order, or ask Max to do the steps for you. Watch the numbers change as you go.</p>
+    </div>
+    <div class="demo rv d1" id="demoRoot"><noscript><img src="img/dashboard.webp" alt="The management dashboard of the app" width="1800" height="1125"></noscript></div>
+  </div>
+</section>
+
+<!-- ===================================================== features -->
+<section class="pad" id="features">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="kicker">Everything in one place</span>
+      <h2>Stop juggling notebooks, spreadsheets and chat groups.</h2>
+      <p>One booking sheet. One bill per guest. One stock count. Every department works from the same live picture of the property.</p>
+    </div>
+
+    <div class="row">
+      <div class="copy rv">
+        <span class="kicker">Reservations and front desk</span>
+        <h3>Every room, every night, at a glance.</h3>
+        <p>See who is in, who arrives and which room is free on a colour coded calendar. Book a guest in one form, or click an empty night.</p>
+        <ul class="ticks">
+          <li><svg><use href="#i-check"/></svg> Calendar with occupancy for each day</li>
+          <li><svg><use href="#i-check"/></svg> Auto assign rooms, with a reason for each one</li>
+          <li><svg><use href="#i-check"/></svg> Waiting list that offers a room the moment one frees up</li>
+          <li><svg><use href="#i-check"/></svg> Guest profiles with stays, preferences and notes</li>
+          <li><svg><use href="#i-check"/></svg> Online check in: guests fill in their details from their own phone</li>
+        </ul>
+      </div>
+      <div class="shot rv d1"><div class="browser"><div class="bar"><i></i><i></i><i></i><span>Calendar</span></div><img loading="lazy" src="img/calendar.webp" width="1800" height="1125" alt="The calendar: every room by night, with bookings in colour and occupancy for each day."></div></div>
+    </div>
+
+    <div class="row flip">
+      <div class="copy rv">
+        <span class="kicker">Restaurant and bar</span>
+        <h3>Take the order. The kitchen sees it at once.</h3>
+        <p>A point of sale for the restaurant and the bar, with tables, tabs and a kitchen screen. Charge a meal to a guest's room or take payment at the table.</p>
+        <ul class="ticks">
+          <li><svg><use href="#i-check"/></svg> Table management with time open and running total</li>
+          <li><svg><use href="#i-check"/></svg> Split a bill by items or into equal shares</li>
+          <li><svg><use href="#i-check"/></svg> Kitchen tickets with notes for the cook</li>
+          <li><svg><use href="#i-check"/></svg> Cash, card, EFT or room charge, recorded on one bill</li>
+        </ul>
+      </div>
+      <div class="shot rv d1"><div class="browser"><div class="bar"><i></i><i></i><i></i><span>Point of sale</span></div><img loading="lazy" src="img/pos.webp" width="1800" height="1125" alt="The restaurant point of sale with the menu, the current order and payment choices."></div></div>
+    </div>
+
+    <div class="row">
+      <div class="copy rv">
+        <span class="kicker">Invoices and documents</span>
+        <h3>Professional paperwork in a few taps.</h3>
+        <p>Invoices, receipts, guest statements and daily reports are made from your live data, so they always match the screen. Print them, save them as PDF or send them to the guest.</p>
+        <ul class="ticks">
+          <li><svg><use href="#i-check"/></svg> Numbered invoices and receipts that cannot be changed afterwards</li>
+          <li><svg><use href="#i-check"/></svg> Your own logo, colours and signature</li>
+          <li><svg><use href="#i-check"/></svg> Send by email, WhatsApp or text from your own accounts</li>
+          <li><svg><use href="#i-check"/></svg> Prints on one clean A4 page</li>
+        </ul>
+      </div>
+      <div class="shot rv d1"><div class="browser"><div class="bar"><i></i><i></i><i></i><span>Create documents</span></div><img loading="lazy" src="img/create-docs.webp" width="1800" height="1125" alt="The Create documents page with invoice, receipt, guest statement and report choices."></div></div>
+    </div>
+
+    <div class="row flip">
+      <div class="copy rv">
+        <span class="kicker">Stock and costs</span>
+        <h3>Know what is running low before it runs out.</h3>
+        <p>Stock comes off the shelf as you sell. See what is on hand, how many days it will last and what to order, and catch waste and count differences early.</p>
+        <ul class="ticks">
+          <li><svg><use href="#i-check"/></svg> Low stock alerts and suggested orders</li>
+          <li><svg><use href="#i-check"/></svg> Receive, count and write off with a reason</li>
+          <li><svg><use href="#i-check"/></svg> Recipes with cost and margin per portion</li>
+          <li><svg><use href="#i-check"/></svg> Bring in your old lists from a spreadsheet</li>
+        </ul>
+      </div>
+      <div class="shot rv d1"><div class="browser"><div class="bar"><i></i><i></i><i></i><span>Stock</span></div><img loading="lazy" src="img/stock.webp" width="1800" height="1125" alt="The stock page showing items on hand, days left and suggested orders."></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== gallery -->
+<section class="pad" id="see" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="kicker">A look inside</span>
+      <h2>Clear screens your whole team can use.</h2>
+      <p>Large buttons, plain words and the same layout on every device.</p>
+    </div>
+    <div class="tabs rv" role="tablist" aria-label="Screens">
+      <button class="tab" role="tab" aria-selected="true" data-p="g1">Reservations</button>
+      <button class="tab" role="tab" aria-selected="false" data-p="g2">Room board</button>
+      <button class="tab" role="tab" aria-selected="false" data-p="g3">Guests</button>
+      <button class="tab" role="tab" aria-selected="false" data-p="g4">Tables</button>
+      <button class="tab" role="tab" aria-selected="false" data-p="g5">Reception</button>
+    </div>
+    <div class="gallery rv d1">
+      <figure class="pane on" id="g1" role="tabpanel" style="margin:0"><div class="browser"><div class="bar"><i></i><i></i><i></i><span>Reservations</span></div><img loading="lazy" src="img/reservations.webp" width="1800" height="1125" alt="The reservations list with check in and check out buttons."></div><figcaption>Check guests in and out with one press, and see what each stay is worth.</figcaption></figure>
+      <figure class="pane" id="g2" role="tabpanel" style="margin:0"><div class="browser"><div class="bar"><i></i><i></i><i></i><span>Room board</span></div><img loading="lazy" src="img/roomboard.webp" width="1800" height="1125" alt="The room board showing every room and its status."></div><figcaption>Every room and its status. Add new rooms in seconds, even a whole range like 101 to 110.</figcaption></figure>
+      <figure class="pane" id="g3" role="tabpanel" style="margin:0"><div class="browser"><div class="bar"><i></i><i></i><i></i><span>Guests</span></div><img loading="lazy" src="img/guests.webp" width="1800" height="1125" alt="The guest list with contact details and stays."></div><figcaption>Know your regulars: their stays, spend, likes and notes.</figcaption></figure>
+      <figure class="pane" id="g4" role="tabpanel" style="margin:0"><div class="browser"><div class="bar"><i></i><i></i><i></i><span>Tables</span></div><img loading="lazy" src="img/tables.webp" width="1800" height="1125" alt="The restaurant tables page."></div><figcaption>Set up your sections and tables, then watch each one from order to bill.</figcaption></figure>
+      <figure class="pane" id="g5" role="tabpanel" style="margin:0"><div class="browser"><div class="bar"><i></i><i></i><i></i><span>Reception</span></div><img loading="lazy" src="img/reception.webp" width="1800" height="1125" alt="The reception dashboard."></div><figcaption>The front desk starts the day with what matters: arrivals, departures and rooms to clean.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== Max -->
+<section class="pad max" id="max">
+  <div class="wrap max-grid">
+    <div class="rv">
+      <span class="kicker">Meet Max</span>
+      <h2 style="font-size:clamp(32px,4.4vw,52px);font-weight:800;margin:14px 0 16px">An assistant that does the typing, and asks before it acts.</h2>
+      <p style="color:var(--mute);font-size:19px">Tell Max what you need in plain words. It looks things up, prepares the work and shows you each step. Nothing changes until you press <b style="color:#fff">Confirm</b>.</p>
+      <div class="cards3">
+        <div class="mini"><svg><use href="#i-spark"/></svg><div><b>Bookings in seconds</b><p>"Add Roberto for two nights." Max records the guest and the booking, and carries on with the rest of the job.</p></div></div>
+        <div class="mini"><svg><use href="#i-doc"/></svg><div><b>Invoices and reports</b><p>Ask for an invoice, a guest statement or today's end of day report and get it ready to print or send.</p></div></div>
+        <div class="mini"><svg><use href="#i-list"/></svg><div><b>Knows your house rules</b><p>Upload your procedures and policies. Max reads them first and answers only what you asked.</p></div></div>
+      </div>
+    </div>
+    <div class="rv d1">
+      <div class="chat" aria-label="An example conversation with Max">
+        <div class="chat-top"><img src="img/logo.png" alt=""><div><b>Max</b><span>AI assistant</span></div></div>
+        <div class="msg me">Roberto Van Rensburg just walked in. Book him a Standard room for tonight, check him in and make his invoice.</div>
+        <div class="msg ai">I have prepared three steps for you to check:
+          <div class="plan">
+            <div><em>1</em><span>Book Roberto Van Rensburg (new guest) into a Standard Room, tonight, 1 night.</span></div>
+            <div><em>2</em><span>Check him in to a ready room. Room charges go on the bill.</span></div>
+            <div><em>3</em><span>Issue an invoice to Roberto Van Rensburg.</span></div>
+          </div>
+          <div class="plan-actions"><span class="y">Confirm</span><span class="n">Cancel</span></div>
+        </div>
+        <p class="chat-note">An example of how it looks. Max never changes anything until you confirm, and answers can be wrong, so check important figures.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== departments -->
+<section class="pad" id="departments">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="kicker">One app, every department</span>
+      <h2>Each team gets its own screen. You get the whole picture.</h2>
+      <p>A waiter sees the restaurant. A bartender sees the bar. Only the owner and managers see the money and settings.</p>
+    </div>
+    <div class="depts">
+      <div class="dept rv"><div class="ico"><svg><use href="#i-bed"/></svg></div><h3>Reception</h3><p>Bookings, calendar, check in and out, guests, folios, messages and online booking.</p></div>
+      <div class="dept rv d1"><div class="ico"><svg><use href="#i-fork"/></svg></div><h3>Restaurant</h3><p>Tables, point of sale, kitchen screen, recipes and food cost.</p></div>
+      <div class="dept rv d2"><div class="ico"><svg><use href="#i-glass"/></svg></div><h3>Bar</h3><p>Open tabs, point of sale, stock and cost of sales for drinks.</p></div>
+      <div class="dept rv"><div class="ico"><svg><use href="#i-broom"/></svg></div><h3>Housekeeping</h3><p>Room status at a glance: dirty, clean, inspected or out of service.</p></div>
+      <div class="dept rv d1"><div class="ico"><svg><use href="#i-spark"/></svg></div><h3>Spa and shop</h3><p>Treatments, therapist appointments and a shop price list, charged to the room or paid.</p></div>
+      <div class="dept rv d2"><div class="ico"><svg><use href="#i-tent"/></svg></div><h3>Campsite</h3><p>Sites and bookings for campsites run on the same tools as rooms.</p></div>
+      <div class="dept rv"><div class="ico"><svg><use href="#i-box"/></svg></div><h3>Stores</h3><p>Stock by department, what to reorder, receiving, waste and counts.</p></div>
+      <div class="dept rv d1"><div class="ico"><svg><use href="#i-chart"/></svg></div><h3>Management</h3><p>Revenue, occupancy, balances, end of day, the audit trail and staff.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== reliability -->
+<section class="pad" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="kicker">Built for real conditions</span>
+      <h2>Made for places where the internet comes and goes.</h2>
+      <p>Open the app once and it stays on your device. If the connection drops, you keep working, and your changes are sent when it returns.</p>
+    </div>
+    <div class="trust">
+      <div class="t rv"><svg><use href="#i-phone"/></svg><h3>Install it, no app store</h3><p>Add it to your home screen from the browser. It opens full screen like any other app.</p></div>
+      <div class="t rv d1"><svg><use href="#i-wifi"/></svg><h3>Works offline</h3><p>Pages and recent data are kept on the device. Work you do offline waits in a queue and syncs later.</p></div>
+      <div class="t rv d2"><svg><use href="#i-send"/></svg><h3>Send from your own accounts</h3><p>Connect your own email, WhatsApp or text service to send confirmations, invoices and receipts.</p></div>
+      <div class="t rv"><svg><use href="#i-down"/></svg><h3>Bring your data across</h3><p>Paste or load rooms, guests, bookings and stock from your old system, and check it before it goes in.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== get the app -->
+<section class="pad" id="get" style="padding-top:0">
+  <div class="wrap">
+    <div class="get rv">
+      <div class="get-copy">
+        <span class="kicker">Get the app</span>
+        <h2>Install it on your phone, tablet or computer.</h2>
+        <p>No app store and no big download. It installs straight from your browser, opens full screen with its own icon, keeps working when the internet drops, and is always the latest version.</p>
+        <div class="get-actions">
+          <button class="btn primary" type="button" data-install id="installBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v12M7 11l5 5 5-5M4.5 20.5h15"/></svg>
+            <span data-install-label>Install the app</span></button>
+          <a class="btn ghost" href="https://royaltystay.abrdns.com/login">Or open it in the browser</a>
+        </div>
+        <p class="get-status" id="installStatus" role="status" aria-live="polite"></p>
+        <p class="fine">It is not on the App Store or Google Play yet. It installs from this page.</p>
+      </div>
+      <div class="get-qr">
+        <div class="qr"><img src="img/qr.svg" width="148" height="148" alt="QR code that opens this page on your phone" loading="lazy"></div>
+        <b>On a computer?</b>
+        <span>Scan this with your phone's camera to install it there.</span>
+      </div>
+    </div>
+    <div class="how-install">
+      <div class="inst" data-os="android"><div class="ico"><svg><use href="#i-phone"/></svg></div><h3>Android</h3>
+        <ol><li>Open this page in <b>Chrome</b>.</li><li>Press <b>Install the app</b>, or open the menu (three dots) and choose <b>Install app</b>.</li><li>Press <b>Install</b>. The icon appears on your home screen.</li></ol></div>
+      <div class="inst" data-os="ios"><div class="ico"><svg><use href="#i-phone"/></svg></div><h3>iPhone and iPad</h3>
+        <ol><li>Open this page in <b>Safari</b>.</li><li>Press the <b>Share</b> button (a square with an arrow).</li><li>Choose <b>Add to Home Screen</b>, then <b>Add</b>.</li></ol></div>
+      <div class="inst" data-os="desktop"><div class="ico"><svg><use href="#i-doc"/></svg></div><h3>Windows, Mac and Linux</h3>
+        <ol><li>Open this page in <b>Chrome</b> or <b>Edge</b>.</li><li>Press <b>Install the app</b>, or the install icon at the right end of the address bar.</li><li>Press <b>Install</b>. It opens in its own window.</li></ol></div>
+    </div>
+    <p class="legal" style="margin-top:22px">Opened this link from WhatsApp, Facebook or another app? Those can not install it. Open the link in Chrome or Safari instead, using the menu or the copy link option.</p>
+  </div>
+</section>
+
+<!-- ===================================================== how -->
+<section class="pad" id="how" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="kicker">How it starts</span>
+      <h2>From sign up to first booking in an afternoon.</h2>
+    </div>
+    <div class="steps">
+      <div class="step rv"><h3>Create your account</h3><p>Sign up with an email code or with Google. Choose Admin to see everything, or start in one department.</p></div>
+      <div class="step rv d1"><h3>Set up your property</h3><p>Add your rooms and menu, or try the app first with sample rooms you can remove later. Invite your team with their own logins.</p></div>
+      <div class="step rv d2"><h3>Take your first booking</h3><p>Book a guest, check them in, charge a meal and issue the invoice. Or ask Max to do the steps for you.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== trust -->
+<section class="pad" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="kicker">Control and accountability</span>
+      <h2>You decide who can do what.</h2>
+    </div>
+    <div class="trust">
+      <div class="t rv"><svg><use href="#i-users"/></svg><h3>Roles for every person</h3><p>Owners, managers, reception, waiters, bartenders and housekeepers each see only what their job needs.</p></div>
+      <div class="t rv d1"><svg><use href="#i-list"/></svg><h3>An audit trail</h3><p>Important actions are recorded with who did them and when, so you can see what happened.</p></div>
+      <div class="t rv d2"><svg><use href="#i-shield"/></svg><h3>Approval for removals</h3><p>Deleting important records needs a manager or owner password and a reason.</p></div>
+    </div>
+    <p class="legal rv">We are honest about limits: no software can promise to be completely secure. Tax, privacy and records rules, and what your business must keep, are to be confirmed with the relevant legal bodies, authorities and entities of Namibia and with your own accountant. RoyalStay Intelligence is not approved or accredited by any authority.</p>
+  </div>
+</section>
+
+<!-- ===================================================== faq -->
+<section class="pad" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="kicker">Questions</span>
+      <h2>Good to know before you start.</h2>
+    </div>
+    <div class="faq rv">
+      <details><summary>What kind of business is it for?</summary><p>Lodges, guest houses, hotels, campsites and other places with rooms, a restaurant or a bar. You switch on only the departments you use.</p></details>
+      <details><summary>Do I need internet all the time?</summary><p>No. The app is kept on your device, and recent pages and data stay available when the connection drops. Work done offline is sent when you are back online. Sending email or WhatsApp, and Max, need a connection.</p></details>
+      <details><summary>Which devices does it work on?</summary><p>Any modern phone, tablet or computer with a web browser. You can install it from this page, so there is nothing to download from a store.</p></details>
+      <details><summary>How do I install it?</summary><p>Press "Install the app" on this page. On an iPhone, use Safari, press Share and choose Add to Home Screen. It is not on the App Store or Google Play yet.</p></details>
+      <details><summary>Does Max change things on its own?</summary><p>No. Max prepares each step and shows it to you. It only happens when you press Confirm. Max can be wrong, so always check important figures on the page.</p></details>
+      <details><summary>Can I send invoices and booking confirmations to guests?</summary><p>Yes, by email, WhatsApp or text message, once you connect your own sending accounts under Settings. Until then they wait in the Messages page for you to send by hand.</p></details>
+      <details><summary>Does it handle tax and legal requirements?</summary><p>Bills show tax, and amounts are in NAD. What your business must record, charge and keep is to be confirmed with the relevant legal bodies, authorities and entities of Namibia and with your accountant. We do not claim approval by any authority.</p></details>
+      <details><summary>Can I move my existing data across?</summary><p>Yes. The import tool reads rooms, guests, bookings and stock lists from a spreadsheet or an export from another system, and shows you what it found before anything is saved.</p></details>
+      <details><summary>What does it cost?</summary><p>Pricing is to be announced. Businesses can create an account now and try the app with sample rooms.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== call to action -->
+<section class="cta">
+  <div class="wrap">
+    <div class="cta-box rv">
+      <img src="img/logo.png" alt="" width="84" height="84">
+      <h2>Give your team one place to work.</h2>
+      <p>Create your account, try the sample rooms, and take your first booking today.</p>
+      <div class="hero-actions" style="margin:0">
+        <a class="btn primary" href="https://royaltystay.abrdns.com/register">Create your account</a>
+        <a class="btn ghost" href="https://royaltystay.abrdns.com/login">Sign in</a>
+        <button class="btn ghost" type="button" data-install>Install the app</button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="#top"><img src="img/logo.png" alt="" width="40" height="40"><span>RoyalStay<small>Intelligence</small></span></a>
+        <p>Your property, running itself. Hospitality management for lodges, guest houses and hotels in Namibia.</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="#features">Features</a><a href="#max">Max, the AI</a><a href="#get">Get the app</a><a href="#faq">Questions</a>
+        <a href="https://royaltystay.abrdns.com/login">Sign in</a><a href="https://royaltystay.abrdns.com/register">Create account</a>
+        <a href="privacy.html">Privacy</a><a href="terms.html">Terms</a>
+      </nav>
+    </div>
+    <div class="copy-line">&copy; 2026 RoyalStay Intelligence. All rights reserved. This website and application, including their design, text, code and images, are protected by copyright law. Pictures of the app show fictional sample data.</div>
+  </div>
+</footer>
+
+<script src="js/site.js"></script>
+<script src="js/demo.js"></script>
+</body>
+</html>
